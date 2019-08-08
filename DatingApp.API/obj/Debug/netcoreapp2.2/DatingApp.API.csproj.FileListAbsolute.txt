@@ -1,0 +1,14 @@
+/Users/samihamdan/Desktop/Work Temp Crap/Utiliserve/DatingApp/DatingApp.API/bin/Debug/netcoreapp2.2/DatingApp.API.deps.json
+/Users/samihamdan/Desktop/Work Temp Crap/Utiliserve/DatingApp/DatingApp.API/bin/Debug/netcoreapp2.2/DatingApp.API.runtimeconfig.json
+/Users/samihamdan/Desktop/Work Temp Crap/Utiliserve/DatingApp/DatingApp.API/bin/Debug/netcoreapp2.2/DatingApp.API.runtimeconfig.dev.json
+/Users/samihamdan/Desktop/Work Temp Crap/Utiliserve/DatingApp/DatingApp.API/bin/Debug/netcoreapp2.2/DatingApp.API.dll
+/Users/samihamdan/Desktop/Work Temp Crap/Utiliserve/DatingApp/DatingApp.API/bin/Debug/netcoreapp2.2/DatingApp.API.pdb
+/Users/samihamdan/Desktop/Work Temp Crap/Utiliserve/DatingApp/DatingApp.API/obj/Debug/netcoreapp2.2/DatingApp.API.csprojAssemblyReference.cache
+/Users/samihamdan/Desktop/Work Temp Crap/Utiliserve/DatingApp/DatingApp.API/obj/Debug/netcoreapp2.2/DatingApp.API.csproj.CoreCompileInputs.cache
+/Users/samihamdan/Desktop/Work Temp Crap/Utiliserve/DatingApp/DatingApp.API/obj/Debug/netcoreapp2.2/DatingApp.API.RazorAssemblyInfo.cache
+/Users/samihamdan/Desktop/Work Temp Crap/Utiliserve/DatingApp/DatingApp.API/obj/Debug/netcoreapp2.2/DatingApp.API.RazorAssemblyInfo.cs
+/Users/samihamdan/Desktop/Work Temp Crap/Utiliserve/DatingApp/DatingApp.API/obj/Debug/netcoreapp2.2/DatingApp.API.AssemblyInfoInputs.cache
+/Users/samihamdan/Desktop/Work Temp Crap/Utiliserve/DatingApp/DatingApp.API/obj/Debug/netcoreapp2.2/DatingApp.API.AssemblyInfo.cs
+/Users/samihamdan/Desktop/Work Temp Crap/Utiliserve/DatingApp/DatingApp.API/obj/Debug/netcoreapp2.2/DatingApp.API.RazorTargetAssemblyInfo.cache
+/Users/samihamdan/Desktop/Work Temp Crap/Utiliserve/DatingApp/DatingApp.API/obj/Debug/netcoreapp2.2/DatingApp.API.dll
+/Users/samihamdan/Desktop/Work Temp Crap/Utiliserve/DatingApp/DatingApp.API/obj/Debug/netcoreapp2.2/DatingApp.API.pdb
