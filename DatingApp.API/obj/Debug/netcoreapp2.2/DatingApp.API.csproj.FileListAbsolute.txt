@@ -12,3 +12,17 @@
 /Users/samihamdan/Desktop/Work Temp Crap/Utiliserve/DatingApp/DatingApp.API/obj/Debug/netcoreapp2.2/DatingApp.API.RazorTargetAssemblyInfo.cache
 /Users/samihamdan/Desktop/Work Temp Crap/Utiliserve/DatingApp/DatingApp.API/obj/Debug/netcoreapp2.2/DatingApp.API.dll
 /Users/samihamdan/Desktop/Work Temp Crap/Utiliserve/DatingApp/DatingApp.API/obj/Debug/netcoreapp2.2/DatingApp.API.pdb
+E:\E-Documents\Projects\.net\dotnet-dating\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.csprojAssemblyReference.cache
+E:\E-Documents\Projects\.net\dotnet-dating\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.csproj.CoreCompileInputs.cache
+E:\E-Documents\Projects\.net\dotnet-dating\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.RazorAssemblyInfo.cache
+E:\E-Documents\Projects\.net\dotnet-dating\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.RazorAssemblyInfo.cs
+E:\E-Documents\Projects\.net\dotnet-dating\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.AssemblyInfoInputs.cache
+E:\E-Documents\Projects\.net\dotnet-dating\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.AssemblyInfo.cs
+E:\E-Documents\Projects\.net\dotnet-dating\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.dll
+E:\E-Documents\Projects\.net\dotnet-dating\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.pdb
+E:\E-Documents\Projects\.net\dotnet-dating\DatingApp.API\bin\Debug\netcoreapp2.2\DatingApp.API.deps.json
+E:\E-Documents\Projects\.net\dotnet-dating\DatingApp.API\bin\Debug\netcoreapp2.2\DatingApp.API.runtimeconfig.json
+E:\E-Documents\Projects\.net\dotnet-dating\DatingApp.API\bin\Debug\netcoreapp2.2\DatingApp.API.runtimeconfig.dev.json
+E:\E-Documents\Projects\.net\dotnet-dating\DatingApp.API\bin\Debug\netcoreapp2.2\DatingApp.API.dll
+E:\E-Documents\Projects\.net\dotnet-dating\DatingApp.API\bin\Debug\netcoreapp2.2\DatingApp.API.pdb
+E:\E-Documents\Projects\.net\dotnet-dating\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.RazorTargetAssemblyInfo.cache
