@@ -1,7 +1,7 @@
-using DatingApp.API.Models;
 using Microsoft.EntityFrameworkCore;
+using Utiliserve.API.Models;
 
-namespace DatingApp.API.Data
+namespace Utiliserve.API.Data
 {
     public class DataContext: DbContext 
     {
@@ -10,5 +10,7 @@ namespace DatingApp.API.Data
         public DbSet<Value> Values { get; set; }
         public DbSet<User> Users {get; set; }
         public DbSet<Photo> Photos { get; set; }
+        public DbSet<Form> Forms { get; set; }
+        public DbSet<FormField> FormFields { get; set; }
     }
 }

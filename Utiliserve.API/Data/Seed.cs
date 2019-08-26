@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using DatingApp.API.Models;
+using Utiliserve.API.Models;
 using Newtonsoft.Json;
 
-namespace DatingApp.API.Data
+namespace Utiliserve.API.Data
 {
     public class Seed
     {

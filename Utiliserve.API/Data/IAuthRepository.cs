@@ -1,8 +1,8 @@
 
 using System.Threading.Tasks;
-using DatingApp.API.Models;
+using Utiliserve.API.Models;
 
-namespace DatingApp.API.Data
+namespace Utiliserve.API.Data
 
 {
     public interface IAuthRepository
