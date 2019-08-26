@@ -35,13 +35,17 @@ namespace Utiliserve.API
         //Anything added as a service can be used in other parts of our application
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DataContext>(x => x.UseSqlite (Configuration.GetConnectionString("DefaultConnection")));
+            // Development
+            //services.AddDbContext<DataContext>(x => x.UseSqlite (Configuration.GetConnectionString("DefaultConnection")));
+            
+            services.AddDbContext<DataContext>(x => x.UseSqlServer (Configuration.GetConnectionString("DefaultConnection")));
+            services.BuildServiceProvider().GetService<DataContext>().Database.Migrate();
+        
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
             .AddJsonOptions(opt => {
                 opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
             });
                 
-            
             services.AddCors();
             services.AddAutoMapper();
             services.AddTransient<Seed>();
@@ -89,11 +93,18 @@ namespace Utiliserve.API
             }
 
             // app.UseHttpsRedirection();
-            //seeder.SeedUsers();
-            //seeder.SeedForms();
+            seeder.SeedUsers();
+            seeder.SeedForms();
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthentication();
-            app.UseMvc();
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+            app.UseMvc(routes =>{
+                routes.MapSpaFallbackRoute(
+                    name: "spa-fallback",
+                    defaults: new {controller = "Fallback", action="Index"}
+                );
+            });
         }
     }
 }

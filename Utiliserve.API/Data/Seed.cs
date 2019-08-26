@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Utiliserve.API.Models;
 using Newtonsoft.Json;
+using System.Linq;
 
 namespace Utiliserve.API.Data
 {
@@ -14,19 +15,21 @@ namespace Utiliserve.API.Data
 
         public void SeedUsers(){
 
-            var userData = System.IO.File.ReadAllText("Data/UserSeedData.json");
-            var users = JsonConvert.DeserializeObject<List<User>>(userData);
-            foreach (var user in users)
-            {
-                byte[] passwordHash, passwordSalt;
-                CreatePasswordHash("password", out passwordHash, out passwordSalt);
-                user.PasswordHash = passwordHash;
-                user.PasswordSalt = passwordSalt;
-                user.Username = user.Username.ToLower();
+            //if(!context.Users.Any()) {
+                var userData = System.IO.File.ReadAllText("Data/UserSeedData.json");
+                var users = JsonConvert.DeserializeObject<List<User>>(userData);
+                foreach (var user in users)
+                {
+                    byte[] passwordHash, passwordSalt;
+                    CreatePasswordHash("password", out passwordHash, out passwordSalt);
+                    user.PasswordHash = passwordHash;
+                    user.PasswordSalt = passwordSalt;
+                    user.Username = user.Username.ToLower();
 
-                _context.Users.Add(user);
-            }
-            _context.SaveChanges();
+                    _context.Users.Add(user);
+                }
+                _context.SaveChanges();
+            //}
         }
 
         private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
@@ -40,14 +43,17 @@ namespace Utiliserve.API.Data
         }
 
         public void SeedForms(){
-            var formData = System.IO.File.ReadAllText("Data/FormSeedData.json");
-            var forms = JsonConvert.DeserializeObject<List<Form>>(formData);
 
-            foreach (var form in forms)
-            {
-                _context.Forms.Add(form);
-            }
-            _context.SaveChanges();
+            //if(!context.Forms.Any()){
+                var formData = System.IO.File.ReadAllText("Data/FormSeedData.json");
+                var forms = JsonConvert.DeserializeObject<List<Form>>(formData);
+
+                foreach (var form in forms)
+                {
+                    _context.Forms.Add(form);
+                }
+                _context.SaveChanges();
+            //}
         }
 
     }
