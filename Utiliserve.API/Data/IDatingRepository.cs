@@ -12,6 +12,9 @@ namespace Utiliserve.API.Data
          Task<bool> SaveAll();
          Task<IEnumerable<User>> GetUsers();
          Task<User> GetUser(int id);
+         //Forms
+         Task<IEnumerable<Form>> GetForms();
+         Task<Form> GetForm(int id);
 
         
          

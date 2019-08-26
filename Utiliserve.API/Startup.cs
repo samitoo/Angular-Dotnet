@@ -90,6 +90,7 @@ namespace Utiliserve.API
 
             // app.UseHttpsRedirection();
             //seeder.SeedUsers();
+            //seeder.SeedForms();
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthentication();
             app.UseMvc();

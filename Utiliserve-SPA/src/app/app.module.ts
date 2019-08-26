@@ -28,6 +28,10 @@ import { MemberEditComponent } from './members/member-edit/member-edit.component
 import { MemberEditResolver } from './_resolvers/member-edit-resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes-guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { FormListResolver } from './_resolvers/form-list-resolver';
+import { FormListComponent } from './forms/form-list/form-list.component';
+import { FormCardComponent } from './forms/form-card/form-card.component';
+import { ApiComponent } from './api/api.component';
 
 
 
@@ -47,7 +51,10 @@ export function tokenGetter(){
       MemberCardComponent,
       MemberDetailComponent,
       MemberEditComponent,
-      DashboardComponent
+      DashboardComponent,
+      FormListComponent,
+      FormCardComponent,
+      ApiComponent
    ],
    imports: [
       BrowserModule,
@@ -74,6 +81,7 @@ export function tokenGetter(){
       MemberDetailResolver,
       MemberListResolver,
       MemberEditResolver,
+      FormListResolver,
       PreventUnsavedChanges
    ],
    bootstrap: [

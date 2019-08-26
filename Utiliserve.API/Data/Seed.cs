@@ -39,5 +39,16 @@ namespace Utiliserve.API.Data
             }
         }
 
+        public void SeedForms(){
+            var formData = System.IO.File.ReadAllText("Data/FormSeedData.json");
+            var forms = JsonConvert.DeserializeObject<List<Form>>(formData);
+
+            foreach (var form in forms)
+            {
+                _context.Forms.Add(form);
+            }
+            _context.SaveChanges();
+        }
+
     }
 }

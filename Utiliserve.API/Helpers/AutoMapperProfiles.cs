@@ -28,6 +28,9 @@ namespace Utiliserve.API.Helpers
 
             //Backwards because it's going form user submit to DB?
             CreateMap<UserForUpdateDto, User>();
+
+            CreateMap<Form, FormsForListDto>();
+            CreateMap<Form, FormForDetailedDto>();
         }
     }
 }

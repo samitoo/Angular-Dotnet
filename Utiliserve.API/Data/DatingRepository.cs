@@ -36,6 +36,18 @@ namespace Utiliserve.API.Data
             return users;
         }
 
+        public async Task<Form> GetForm(int id)
+        {
+            var form = await _context.Forms.FirstOrDefaultAsync(u => u.Id == id);
+            return form;
+        }
+
+        public async Task<IEnumerable<Form>> GetForms()
+        {
+            var forms = await _context.Forms.ToListAsync();
+            return forms;
+        }
+
         public async Task<bool> SaveAll()
         {
             //returns more than 0, it returns true, if = 0, nothing saved to DB
