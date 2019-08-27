@@ -14,7 +14,7 @@ export class AuthService {
 
 constructor(private http: HttpClient) { }
 
-login(model: any){
+login(model: any) {
   // rxjs operators are what allow to store items from requests, ie the token
   return this.http.post(this.baseUrl + 'login', model)
     .pipe(
