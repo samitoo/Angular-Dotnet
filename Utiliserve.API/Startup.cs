@@ -75,6 +75,8 @@ namespace Utiliserve.API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                seeder.SeedUsers();
+                seeder.SeedForms(); 
             }
             else
             {
@@ -98,8 +100,7 @@ namespace Utiliserve.API
             }
 
             // app.UseHttpsRedirection();
-            seeder.SeedUsers();
-            seeder.SeedForms();
+            
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthentication();
             app.UseDefaultFiles();
