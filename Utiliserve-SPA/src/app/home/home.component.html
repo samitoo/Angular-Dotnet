@@ -1,25 +1,4 @@
-<div class="old" style="display:none;">
-  <div class="container mt-5">
-    <div *ngIf="!registerMode" style="text-align: center">
-      <h1>Find your match</h1>
-      <p class="lead">Come on in to view your matches... All you need to do is sign up!</p>
-      <div class="text-center">
-        <button class="btn btn-primary btn-lg mr-2"(click)="registerToggle()">Register</button>
-        <button class="btn btn-info btn-lg">Learn more</button>
-      </div>
-    </div>
 
-    <div *ngIf="registerMode" class="container">
-      <div class="row justify-content-center">
-        <div class="col-4">
-            <!--[] is sending data down to child, () is sending data from child up to parent-->
-            <!--[valuesFromHome]="values"-->
-            <app-register (cancelRegister)="cancelRegisterMode($event)"></app-register>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <main role="main">
 <div *ngIf="!registerMode" class="homeSplash">
@@ -28,7 +7,7 @@
     <div class="container">
       <h1 class="display-3">Utiliserve FormzEngine</h1>
       <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-      <p><a class="btn btn-primary btn-lg" role="button" (click)="registerToggle()">Register Now &raquo;</a></p>
+      <p><a class="btn btn-primary btn-lg" role="button" (click)="goToLogin()">Login Now &raquo;</a></p>
     </div>
   </div>
 

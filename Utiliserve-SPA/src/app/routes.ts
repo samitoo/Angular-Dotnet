@@ -17,6 +17,7 @@ import { ApiComponent } from './api/api.component';
 
 export const appRoutes: Routes = [
     {path: 'home', component: HomeComponent},
+    {path: 'admin', component: ApiComponent},
     {
         path: '',
         runGuardsAndResolvers: 'always',
@@ -24,7 +25,6 @@ export const appRoutes: Routes = [
         children: [
             {path: 'dashboard', component: DashboardComponent},
             {path: 'forms', component: FormListComponent, resolve: {forms: FormListResolver}},
-            {path: 'admin', component: ApiComponent},
             {path: 'members', component: MemberListComponent, resolve: {users: MemberListResolver}},
             {path: 'members/:id', component: MemberDetailComponent, resolve: { user: MemberDetailResolver}},
             {path: 'member/edit', component: MemberEditComponent, resolve: {user: MemberEditResolver}
