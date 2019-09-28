@@ -24,21 +24,26 @@ namespace Utiliserve.API
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
             Configuration = configuration;
+            HostingEnvironment = env;
         }
 
         public IConfiguration Configuration { get; }
+        public IHostingEnvironment HostingEnvironment {get;}
 
         // This method gets called by the runtime. Use this method to add services to the container.
         //Anything added as a service can be used in other parts of our application
         public void ConfigureServices(IServiceCollection services)
         {
-            // Development
-            //services.AddDbContext<DataContext>(x => x.UseSqlite (Configuration.GetConnectionString("DefaultConnection")));
+            if (HostingEnvironment.IsDevelopment()){
+                services.AddDbContext<DataContext>(x => x.UseSqlite (Configuration.GetConnectionString("DefaultConnection")));
+            }
+            else{
+                services.AddDbContext<DataContext>(x => x.UseSqlServer (Configuration.GetConnectionString("DefaultConnection")));
+            }
             
-            services.AddDbContext<DataContext>(x => x.UseSqlServer (Configuration.GetConnectionString("DefaultConnection")));
             services.BuildServiceProvider().GetService<DataContext>().Database.Migrate();
         
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
