@@ -1,25 +1,40 @@
-<form #registerForm="ngForm" (ngSubmit)="register()">
-  <h2 class="text-center text-primary">Sign Up</h2>
-  <hr>
-
-  <div class="form-group">
-    <input type="text" class="form-control" requied name="username" [(ngModel)]="model.username" placeholder="Username">
+<div class="row">
+  <div class="col-sm-8" id="currentUsers">
+    <h3>Current Users:</h3>
+    <div class="container mt-5">
+      <div class="row">
+          <div *ngFor="let user of users" class="col-lg-2 col-md-3 col-sm-6">
+            <app-member-card [user]="user"></app-member-card>
+          </div>
+        </div>
+        </div>
   </div>
 
-  <!-- <div class="form-group">
-    <label for="favoriteValue">What is your favoirte value?</label>
-    <select class="form-control" id="favoriteValue">
-      <option *ngFor="let value of valuesFromHome" [value]="value">{{value.name}}</option>
-    </select>
-  </div> -->
+  <div class="col-sm-4" id="newUsers">
+    <form #registerForm="ngForm" (ngSubmit)="register()" id="userRegisterForm">
+      <h2 class="text-center text-primary">Sign Up</h2>
+      <hr>
 
-  <div class="form-group">
-    <input type="password" class="form-control" required name="pssword" [(ngModel)]="model.password" placeholder="Password">
-  </div>
+      <div class="form-group">
+        <input type="text" class="form-control" requied name="username" [(ngModel)]="model.username" placeholder="Username">
+      </div>
 
-  <div class="form-group text-center">
-    <button class="btn btn-success" type="submit">Register</button>
-    <button class="btn btn-default" type="button" (click)="cancel()">Cancel</button>
+      <!--<div class="form-group">
+        <label for="favoriteValue">What is your favoirte value?</label>
+        <select class="form-control" id="favoriteValue">
+          <option *ngFor="let value of valuesFromHome" [value]="value">{{value.name}}</option>
+        </select>
+      </div>-->
+
+      <div class="form-group">
+        <input type="password" class="form-control" required name="pssword" [(ngModel)]="model.password" placeholder="Password">
+      </div>
+
+      <div class="form-group text-center">
+        <button class="btn btn-success" type="submit">Register</button>
+        <button class="btn btn-default" type="button" (click)="cancel()">Cancel</button>
+      </div>
+      
+    </form>
   </div>
-  
-</form>
+</div>

@@ -1,0 +1,18 @@
+#userRegisterForm{
+    width:35%;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+}
+.row{
+    margin:20px;
+}
+
+#currentUsers h3{
+    text-align: center;
+}
+
+#newUsers{
+    border-left: black 1px solid;
+}
+

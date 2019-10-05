@@ -14,6 +14,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormListResolver } from './_resolvers/form-list-resolver';
 import { FormListComponent } from './forms/form-list/form-list.component';
 import { ApiComponent } from './api/api.component';
+import { RegisterComponent } from './register/register.component';
 
 export const appRoutes: Routes = [
     {path: 'home', component: HomeComponent},
@@ -24,6 +25,7 @@ export const appRoutes: Routes = [
         canActivate: [AuthGuard],
         children: [
             {path: 'dashboard', component: DashboardComponent},
+            {path: 'registerUser', component: RegisterComponent, resolve: {users: MemberListResolver}},
             {path: 'forms', component: FormListComponent, resolve: {forms: FormListResolver}},
             {path: 'members', component: MemberListComponent, resolve: {users: MemberListResolver}},
             {path: 'members/:id', component: MemberDetailComponent, resolve: { user: MemberDetailResolver}},
