@@ -32,6 +32,8 @@ import { FormListResolver } from './_resolvers/form-list-resolver';
 import { FormListComponent } from './forms/form-list/form-list.component';
 import { FormCardComponent } from './forms/form-card/form-card.component';
 import { ApiComponent } from './api/api.component';
+import { FormDetailComponent } from './forms/form-detail/form-detail.component';
+import { FormDetailResolver } from './_resolvers/form-detail-resolver';
 
 
 
@@ -54,6 +56,7 @@ export function tokenGetter(){
       DashboardComponent,
       FormListComponent,
       FormCardComponent,
+      FormDetailComponent,
       ApiComponent
    ],
    imports: [
@@ -82,6 +85,7 @@ export function tokenGetter(){
       MemberListResolver,
       MemberEditResolver,
       FormListResolver,
+      FormDetailResolver,
       PreventUnsavedChanges
    ],
    bootstrap: [

@@ -23,7 +23,7 @@ export class ApiComponent implements OnInit {
     }, error => {
       this.alertify.error(error);
     }, () => {
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/forms']);
     });
   }
 

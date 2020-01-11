@@ -13,8 +13,10 @@ import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes-guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormListResolver } from './_resolvers/form-list-resolver';
 import { FormListComponent } from './forms/form-list/form-list.component';
+import { FormDetailResolver } from './_resolvers/form-detail-resolver';
 import { ApiComponent } from './api/api.component';
 import { RegisterComponent } from './register/register.component';
+import { FormDetailComponent } from './forms/form-detail/form-detail.component';
 
 export const appRoutes: Routes = [
     {path: 'home', component: HomeComponent},
@@ -27,6 +29,7 @@ export const appRoutes: Routes = [
             {path: 'dashboard', component: DashboardComponent},
             {path: 'registerUser', component: RegisterComponent, resolve: {users: MemberListResolver}},
             {path: 'forms', component: FormListComponent, resolve: {forms: FormListResolver}},
+            {path: 'forms/:id', component: FormDetailComponent, resolve: { form: FormDetailResolver}},
             {path: 'members', component: MemberListComponent, resolve: {users: MemberListResolver}},
             {path: 'members/:id', component: MemberDetailComponent, resolve: { user: MemberDetailResolver}},
             {path: 'member/edit', component: MemberEditComponent, resolve: {user: MemberEditResolver}
